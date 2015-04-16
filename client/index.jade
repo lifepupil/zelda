@@ -9,10 +9,12 @@ html
   body
     h1 Legend of Zelda
     #user
-      input#handle(type='text')
-      button#set-handle Set Handle
+      input#handle(type='text', placeholder='handle')
+      input#avatar(type='url', placeholder='avatar')
+      button#create-user Create User
 
 
+    script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/lodash/lodash.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
