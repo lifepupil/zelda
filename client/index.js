@@ -8,8 +8,10 @@ $(document).ready(init);
 function init(){
   root = new Firebase('https://zelda-cdr.firebaseio.com/');
   characters = root.child('users');
+
   $('#create-user').click(createUser);
   $('#login-user').click(loginUser);
+
   characters.on('child_added', characterAdded);
   $('#create-character').click(createCharacter);
 
