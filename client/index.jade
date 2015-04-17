@@ -2,13 +2,12 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    Title Legend of Zelda 
+    title Apollo
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
-    h1 Battle Hack
-    #me
+    h1 Legend of Zelda
     #user-creation
       input#email(type='email', placeholder='email')
       input#password(type='password', placeholder='password')
@@ -19,7 +18,6 @@ html
       input#handle(type='text', placeholder='handle')
       input#avatar(type='url', placeholder='avatar')
       button#create-character Create Character
-        
 
     table#characters
       thead
@@ -27,10 +25,9 @@ html
           th Handle
           th Avatar
       tbody
-        
 
     script(src='/vendor/firebase/firebase.js')
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/lodash/lodash.min.js')
-    //- script(src='/vendor/moment/min/moment.min.js')
+    script(src='/vendor/moment/min/moment.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
