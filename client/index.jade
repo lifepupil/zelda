@@ -7,15 +7,30 @@ html
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
-    h1 Legend of Zelda
-    #user
+    h1 Battle Hack
+    #me
+    #user-creation
+      input#email(type='email', placeholder='email')
+      input#password(type='password', placeholder='password')
+      button#create-user Create User
+      button#login-user Login User
+
+    #character-creation
       input#handle(type='text', placeholder='handle')
       input#avatar(type='url', placeholder='avatar')
-      button#create-user Create User
+      button#create-character Create Character
+        
 
+    table#characters
+      thead
+        tr
+          th Handle
+          th Avatar
+      tbody
+        
 
     script(src='/vendor/firebase/firebase.js')
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/lodash/lodash.min.js')
-    //- script(src='/vendor/lodash/lodash.min.js')
+    //- script(src='/vendor/moment/min/moment.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
